@@ -605,6 +605,7 @@
                 log.innerHTML = message;
                 // Add the click handler, if specified.
                 if ("function" === typeof click) {
+                    log.setAttribute("style", "cursor: pointer;");
                     log.addEventListener("click", click);
                 }
                 // append child
