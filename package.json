@@ -1,16 +1,16 @@
 {
   "name": "alertify",
-  "description": "An unobtrusive customizable JavaScript notification system",
+  "description": "An unobtrusive customizable JavaScript notification system - with browserify support",
   "version": "0.3.15",
-  "homepage": "https://alertifyjs.org/",
   "author": {
-    "name": "Fabien Doiron",
-    "email": "fabien.doiron@gmail.com"
+    "name": "Neil Morrison",
+    "email": "email@neil.today"
   },
   "scripts": {
     "test": "gulp test"
   },
-  "repository": "git@github.com:alertifyjs/alertify.js.git",
+  "main": "dist/alertify.js",
+  "repository": "git@github.com:neil-morrison44/alertify.js.git",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "0.0.8",
