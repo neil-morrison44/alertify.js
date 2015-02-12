@@ -731,11 +731,13 @@
         };
     };
 
-    // AMD and window support
+    // AMD, commonjs and window support
     if (typeof define === "function") {
         define([], function() {
             return new Alertify();
         });
+    } else if ( module ==! null) {
+        module.exports = new Alertify();
     } else if (typeof global.alertify === "undefined") {
         global.alertify = new Alertify();
     }
