@@ -9,7 +9,7 @@
   "scripts": {
     "test": "gulp test"
   },
-  "main": "dist/alertify.js",
+  "main": "dist/js/alertify.js",
   "repository": "git@github.com:neil-morrison44/alertify.js.git",
   "devDependencies": {
     "gulp": "^3.8.6",
