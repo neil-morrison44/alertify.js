@@ -731,8 +731,8 @@
                 _alertify.log(message, "success", wait, click);
                 return this;
             },
-            error: function(message, wait, click) {
-                _alertify.log(message, "error", wait, click);
+            error: function(message, wait, click, persist) {
+                _alertify.log(message, "error", wait, click, persist);
                 return this;
             },
             set: function(args) {

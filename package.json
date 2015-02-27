@@ -1,7 +1,7 @@
 {
   "name": "alertify",
   "description": "An unobtrusive customizable JavaScript notification system - with browserify support",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "author": {
     "name": "Neil Morrison",
     "email": "email@neil.today"
