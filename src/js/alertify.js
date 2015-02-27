@@ -569,7 +569,7 @@
              *
              * @return {Object}
              */
-            log: function(message, type, wait, click) {
+            log: function(message, type, wait, click, persist) {
                 // check to ensure the alertify dialog element
                 // has been successfully created
                 var check = function() {
@@ -584,7 +584,7 @@
                 check();
 
                 elLog.className = "alertify-logs";
-                this.notify(message, type, wait, click);
+                this.notify(message, type, wait, click, persist);
                 return this;
             },
 
