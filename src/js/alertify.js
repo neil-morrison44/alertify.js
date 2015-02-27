@@ -615,8 +615,10 @@
                 setTimeout(function() {
                     log.className = log.className + " alertify-log-show";
                 }, 50);
+
                 if (persist !== undefined && persist){
                     var that = this;
+                    log.setAttribute("style", "cursor: pointer;");
                     log.addEventListener("click", function(){
                         that.close(log, 80);
                     });
