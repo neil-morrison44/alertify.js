@@ -599,7 +599,7 @@
              *
              * @return {undefined}
              */
-            notify: function(message, type, wait, click) {
+            notify: function(message, type, wait, click, persist) {
                 var log = document.createElement("article");
                 log.className = "alertify-log" + ((typeof type === "string" && type !== "") ? " alertify-log-" + type : "");
                 log.innerHTML = message;
@@ -608,13 +608,22 @@
                     log.setAttribute("style", "cursor: pointer;");
                     log.addEventListener("click", click);
                 }
+
                 // append child
                 elLog.appendChild(log);
                 // triggers the CSS animation
                 setTimeout(function() {
                     log.className = log.className + " alertify-log-show";
                 }, 50);
-                this.close(log, wait);
+                if (persist !== undefined && persist){
+                    var that = this;
+                    log.addEventListener("click", function(){
+                        that.close(log, 80);
+                    });
+                }else{
+                    this.close(log, wait);
+                }
+                
             },
 
             /**
