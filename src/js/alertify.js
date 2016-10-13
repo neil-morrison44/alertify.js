@@ -355,7 +355,9 @@
                     // unbind event so function only gets called once
                     this.removeEventListener(self.transition.type, transitionDone);
                     // remove log message
-                    elLog.removeChild(this);
+                    if (this.parentNode !== null){
+                        elLog.removeChild(this);
+                    }
                     if (!elLog.hasChildNodes()) {
                         elLog.className += " alertify-logs-hidden";
                     }
